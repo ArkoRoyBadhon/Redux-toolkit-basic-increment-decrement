@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment } from '../../features/counter/CounterSlice';
+import { decrement, increment } from '../../features/counter/CounterSlice';
 import SubChild1 from './sub1/SubChild1';
 import SubChild2 from './sub2/SubChild2';
 
@@ -24,6 +24,7 @@ const Child1 = () => {
             <SubChild2 />
 
             <button onClick={()=>dispatch(increment())} >Increase</button>
+            <button onClick={()=>dispatch(decrement())} >Decrease</button>
         </div>
     );
 };
